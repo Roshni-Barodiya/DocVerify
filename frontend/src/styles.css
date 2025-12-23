@@ -1,0 +1,36 @@
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI}
+.app{display:flex;min-height:100vh;transition:.4s}
+
+/* Glassmorphism */
+.glass{
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Layout */
+.sidebar{width:220px;padding:20px}
+.main{flex:1;padding:20px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.top-actions{display:flex;gap:12px}
+.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{padding:20px;border-radius:18px}
+button{padding:10px 16px;border:none;border-radius:10px;cursor:pointer}
+.wallet-btn{background:#14F1B4;color:#0C3C4C}
+
+/* Responsive */
+@media(max-width:768px){
+  .sidebar{display:none}
+  .app{flex-direction:column}
+}
+
+/* Themes */
+.mint{background:linear-gradient(180deg,#F4FFFC,#E8FDFC);color:#0C3C4C}
+.ocean{background:linear-gradient(180deg,#081F2A,#0C3C4C);color:#E8FDFC}
+.indigo{background:linear-gradient(180deg,#1F1933,#2C2443);color:#F3EEFF}
+
+.success{color:#14F1B4}
+.error{color:#ff6b6b}
